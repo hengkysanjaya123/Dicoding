@@ -116,7 +116,7 @@ class FavoriteFragment : Fragment() {
                     }
 
 
-                }.execute("https://www.thesportsdb.com/api/v1/json/1/lookupevent.php?id=${it.eventID}")
+                }.execute("${BuildConfig.BASE_URL}lookupevent.php?id=${it.eventID}")
             }
             recycler.layoutManager = LinearLayoutManager(view.context)
             recycler.adapter = adapter

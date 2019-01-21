@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" xmlns:tools="http://schemas.android.com/tools"
         android:layout_margin="10dp"
 >
 
@@ -15,7 +15,7 @@
         <TextView
                 android:gravity="center"
                 android:textSize="18sp"
-                android:text="Sen, 05 Mar 2018"
+                tools:text="Sen, 05 Mar 2018"
                 android:id="@+id/tvDate"
                 android:layout_width="match_parent"
                 android:textColor="#70bf79"
@@ -29,7 +29,7 @@
             <TextView
                     android:id="@+id/tvHomeTeam"
                     android:gravity="end"
-                    android:text="Crystal"
+                    tools:text="Crystal"
                     android:layout_weight="0.3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
@@ -39,14 +39,14 @@
                     android:id="@+id/tvHomeScore"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:text="2"
+                    tools:text="2"
                     android:layout_weight="0.1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
 
             <TextView
                     android:gravity="center"
-                    android:text="vs"
+                    tools:text="vs"
                     android:layout_weight="0.05"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
@@ -55,7 +55,7 @@
                     android:id="@+id/tvAwayScore"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:text="2"
+                    tools:text="2"
                     android:layout_weight="0.1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
@@ -63,7 +63,7 @@
             <TextView
                     android:id="@+id/tvAwayTeam"
                     android:gravity="left"
-                    android:text="Crystal"
+                    tools:text="Crystal"
                     android:layout_weight="0.3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>

@@ -120,7 +120,7 @@ class NextMatchFragment : Fragment() {
                 }
 
                 adapter.notifyDataSetChanged()
-            }.execute("https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4328")
+            }.execute("${BuildConfig.BASE_URL}eventsnextleague.php?id=4328")
         } catch (e: Exception) {
             Log.d("testing", e.toString())
         }

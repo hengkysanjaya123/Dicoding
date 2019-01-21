@@ -119,7 +119,7 @@ class LastMatchFragment : Fragment() {
                 }
 
                 adapter.notifyDataSetChanged()
-            }.execute("https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=4328")
+            }.execute("${BuildConfig.BASE_URL}eventspastleague.php?id=4328")
         } catch (e: Exception) {
             Log.d("testing", e.toString())
         }
