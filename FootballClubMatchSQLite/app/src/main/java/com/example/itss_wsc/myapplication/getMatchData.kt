@@ -8,7 +8,7 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-public class GetMatchData(val callback: (result: String) -> Unit) :
+class getMatchData(val callback: (result: String) -> Unit) :
     AsyncTask<String, Integer, String>() {
 
     override fun onPreExecute() {

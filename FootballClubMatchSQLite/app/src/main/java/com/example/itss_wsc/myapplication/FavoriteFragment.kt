@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.itss_wsc.myapplication.Model.Events
 import com.example.itss_wsc.myapplication.Model.Favorite
+import com.example.itss_wsc.myapplication.Utils.EndPoint
 import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.select
 import org.json.JSONObject
@@ -31,7 +32,7 @@ class FavoriteFragment : Fragment() {
 
             Toast.makeText(context, favorites.size.toString(), Toast.LENGTH_SHORT).show()
             adapter = FavoriteAdapter(view.context, favorites) {
-                GetMatchData() {
+                getMatchData() {
                     var obj = JSONObject(it)
                     var eventsArray = obj.getJSONArray("events")
 
@@ -116,7 +117,7 @@ class FavoriteFragment : Fragment() {
                     }
 
 
-                }.execute("${BuildConfig.BASE_URL}lookupevent.php?id=${it.eventID}")
+                }.execute(EndPoint.matchDetailById(it.eventID))
             }
             recycler.layoutManager = LinearLayoutManager(view.context)
             recycler.adapter = adapter

@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import com.example.itss_wsc.myapplication.Model.Events
+import com.example.itss_wsc.myapplication.Utils.EndPoint
 import org.json.JSONObject
 
 class NextMatchFragment : Fragment() {
@@ -34,7 +35,7 @@ class NextMatchFragment : Fragment() {
 
             var pb = v.findViewById<ProgressBar>(R.id.pbAll)
 
-            GetMatchData() {
+            getMatchData() {
 
                 //                Toast.makeText(v.context, it, Toast.LENGTH_SHORT).show()
 
@@ -120,7 +121,7 @@ class NextMatchFragment : Fragment() {
                 }
 
                 adapter.notifyDataSetChanged()
-            }.execute("${BuildConfig.BASE_URL}eventsnextleague.php?id=4328")
+            }.execute(EndPoint.nextMatchesByLeagueId("4328"))
         } catch (e: Exception) {
             Log.d("testing", e.toString())
         }

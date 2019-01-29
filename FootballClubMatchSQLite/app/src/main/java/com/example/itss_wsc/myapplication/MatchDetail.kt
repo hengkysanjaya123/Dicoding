@@ -150,7 +150,7 @@ class MatchDetail : AppCompatActivity() {
 
             var pb = findViewById<ProgressBar>(R.id.pbAll)
             try {
-                GetMatchData() {
+                getMatchData() {
 
                     var obj = JSONObject(it)
                     var teamsArray = obj.getJSONArray("teams")
@@ -163,7 +163,7 @@ class MatchDetail : AppCompatActivity() {
                         .into(ivHomeTeam)
                 }.execute("https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${event.idHomeTeam}")
 
-                GetMatchData() {
+                getMatchData() {
 
                     var obj = JSONObject(it)
                     var teamsArray = obj.getJSONArray("teams")
