@@ -3,12 +3,13 @@ package com.example.itss_wsc.myapplication
 import android.os.AsyncTask
 import android.util.Log
 import android.view.View
+import android.widget.ProgressBar
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-class getMatchData(val callback: (result: String) -> Unit) :
+class getData(val callback: (result: String) -> Unit) :
     AsyncTask<String, Integer, String>() {
 
     override fun onPreExecute() {

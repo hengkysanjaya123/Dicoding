@@ -32,7 +32,7 @@ class FavoriteFragment : Fragment() {
 
             Toast.makeText(context, favorites.size.toString(), Toast.LENGTH_SHORT).show()
             adapter = FavoriteAdapter(view.context, favorites) {
-                getMatchData() {
+                getData() {
                     var obj = JSONObject(it)
                     var eventsArray = obj.getJSONArray("events")
 

@@ -2,11 +2,7 @@ package com.example.itss_wsc.myapplication
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.ProgressBar
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_match_detail.*
-import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,13 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setSupportActionBar(toolbar_main)
+
         bottom_navigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.prevmatch -> {
-                    loadLast(savedInstanceState)
+                R.id.matchesmenu -> {
+                    loadMatches(savedInstanceState)
                 }
-                R.id.nextmatch -> {
-                    loadNext(savedInstanceState)
+                R.id.teamsMenu -> {
+                    loadTeams(savedInstanceState)
                 }
                 R.id.favorites -> {
                     loadFavorite(savedInstanceState)
@@ -29,26 +27,26 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        bottom_navigation.selectedItemId = R.id.prevmatch
+        bottom_navigation.selectedItemId = R.id.matchesmenu
     }
 
 
 
 
-    private fun loadNext(savedInstanceState: Bundle?) {
+    private fun loadTeams(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, NextMatchFragment(), NextMatchFragment::class.java.simpleName)
+                .replace(R.id.main_container, TeamsFragment(), NextMatchFragment::class.java.simpleName)
                 .commit()
         }
     }
 
-    private fun loadLast(savedInstanceState: Bundle?) {
+    private fun loadMatches(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, LastMatchFragment(), LastMatchFragment::class.java.simpleName)
+                .replace(R.id.main_container, MatchesFragment(), LastMatchFragment::class.java.simpleName)
                 .commit()
         }
     }

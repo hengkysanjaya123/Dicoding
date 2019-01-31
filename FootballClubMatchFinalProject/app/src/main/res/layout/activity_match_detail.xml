@@ -27,10 +27,10 @@
             <TextView
                     android:id="@+id/tvDate"
                     android:layout_marginTop="10dp"
-                    tools:textColor="#b8ff9e"
-                    tools:textSize="20sp"
-                    tools:textStyle="bold"
-                    tools:textAlignment="center"
+                    android:textColor="#b8ff9e"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
                     tools:text="Sat, 22 Sep 2018"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -44,16 +44,16 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/ivHomeTeam"
                         android:layout_alignParentLeft="true"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                 />
 
                 <ImageView
                         android:scaleType="fitCenter"
                         android:id="@+id/ivAwayTeam"
                         android:layout_alignParentRight="true"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                 />
             </RelativeLayout>
 
@@ -65,18 +65,18 @@
                 <TextView
                         android:id="@+id/tvHomeScore"
                         android:gravity="right|center_vertical"
-                        tools:textSize="30sp"
-                        tools:textStyle="bold"
-                        tools:text="3"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:text="3"
                         android:layout_weight="0.45"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
 
                 <TextView
                         android:gravity="center|center_vertical"
-                        tools:textSize="18sp"
-                        tools:textStyle="bold"
-                        tools:text="vs"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="vs"
                         android:layout_weight="0.1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
@@ -84,9 +84,9 @@
                 <TextView
                         android:id="@+id/tvAwayScore"
                         android:gravity="left|center_vertical"
-                        tools:textSize="30sp"
-                        tools:textStyle="bold"
-                        tools:text="3"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:text="3"
                         android:layout_weight="0.45"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
@@ -98,9 +98,9 @@
 
                 <TextView
                         android:id="@+id/tvHomeTeam"
-                        tools:textSize="25sp"
-                        tools:textColor="#b8ff9e"
-                        tools:textStyle="bold"
+                        android:textSize="25sp"
+                        android:textColor="#b8ff9e"
+                        android:textStyle="bold"
                         android:gravity="center"
                         tools:text="Liverpool"
                         android:layout_weight="0.5"
@@ -110,9 +110,9 @@
 
                 <TextView
                         android:id="@+id/tvAwayTeam"
-                        tools:textSize="25sp"
-                        tools:textColor="#b8ff9e"
-                        tools:textStyle="bold"
+                        android:textSize="25sp"
+                        android:textColor="#b8ff9e"
+                        android:textStyle="bold"
                         android:gravity="center"
                         tools:text="Liverpool"
                         android:layout_weight="0.5"
@@ -133,10 +133,10 @@
                         android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                 <TextView
-                        tools:textColor="#b8ff9e"
-                        tools:textStyle="bold"
+                        android:textColor="#b8ff9e"
+                        android:textStyle="bold"
                         android:gravity="center"
-                        tools:text="Goals"
+                        android:text="Goals"
                         android:layout_weight="0.2"
                         android:layout_width="0dp" android:layout_height="wrap_content"/>
 
@@ -161,10 +161,10 @@
                         android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                 <TextView
-                        tools:textColor="#b8ff9e"
-                        tools:textStyle="bold"
+                        android:textColor="#b8ff9e"
+                        android:textStyle="bold"
                         android:gravity="center"
-                        tools:text="Shots"
+                        android:text="Shots"
                         android:layout_weight="0.2"
                         android:layout_width="0dp" android:layout_height="wrap_content"/>
 
@@ -186,7 +186,7 @@
 
                 <TextView
                         android:gravity="center"
-                        tools:text="Lineups"
+                        android:text="Lineups"
                         android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
                 <LinearLayout
@@ -201,10 +201,10 @@
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                     <TextView
-                            tools:textColor="#b8ff9e"
-                            tools:textStyle="bold"
+                            android:textColor="#b8ff9e"
+                            android:textStyle="bold"
                             android:gravity="center"
-                            tools:text="Goal Keeper"
+                            android:text="Goal Keeper"
                             android:layout_weight="0.2"
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
@@ -230,10 +230,10 @@
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                     <TextView
-                            tools:textColor="#b8ff9e"
-                            tools:textStyle="bold"
+                            android:textColor="#b8ff9e"
+                            android:textStyle="bold"
                             android:gravity="center"
-                            tools:text="Defense"
+                            android:text="Defense"
                             android:layout_weight="0.2"
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
@@ -259,10 +259,10 @@
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                     <TextView
-                            tools:textColor="#b 8ff9e"
-                            tools:textStyle="bold"
+                            android:textColor="#b8ff9e"
+                            android:textStyle="bold"
                             android:gravity="center"
-                            tools:text="Midfield"
+                            android:text="Midfield"
                             android:layout_weight="0.2"
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
@@ -287,10 +287,10 @@
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                     <TextView
-                            tools:textColor="#b8ff9e"
-                            tools:textStyle="bold"
+                            android:textColor="#b8ff9e"
+                            android:textStyle="bold"
                             android:gravity="center"
-                            tools:text="Forward"
+                            android:text="Forward"
                             android:layout_weight="0.2"
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
@@ -315,10 +315,10 @@
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 
                     <TextView
-                            tools:textColor="#b8ff9e"
-                            tools:textStyle="bold"
+                            android:textColor="#b8ff9e"
+                            android:textStyle="bold"
                             android:gravity="center"
-                            tools:text="Substitutes"
+                            android:text="Substitutes"
                             android:layout_weight="0.2"
                             android:layout_width="0dp" android:layout_height="wrap_content"/>
 

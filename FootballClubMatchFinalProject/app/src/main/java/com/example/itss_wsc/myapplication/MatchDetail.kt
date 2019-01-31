@@ -67,9 +67,9 @@ class MatchDetail : AppCompatActivity() {
                     "AWAYSCORE" to event.intAwayScore
                 )
             }
-            val sb = Snackbar.make(scrollview, "Added to favorite", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(scrollview, "Added to favorite", Snackbar.LENGTH_SHORT).show()
         } catch (e: SQLiteConstraintException) {
-            val sb = Snackbar.make(scrollview, e.localizedMessage, Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(scrollview, e.localizedMessage, Snackbar.LENGTH_SHORT).show()
         }
     }
 
@@ -114,7 +114,7 @@ class MatchDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_match_detail)
 
-        supportActionBar?.title = "Team Detail"
+        supportActionBar?.title = "Match Detail"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         try {
@@ -150,7 +150,7 @@ class MatchDetail : AppCompatActivity() {
 
             var pb = findViewById<ProgressBar>(R.id.pbAll)
             try {
-                getMatchData() {
+                getData() {
 
                     var obj = JSONObject(it)
                     var teamsArray = obj.getJSONArray("teams")
@@ -163,7 +163,7 @@ class MatchDetail : AppCompatActivity() {
                         .into(ivHomeTeam)
                 }.execute("https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${event.idHomeTeam}")
 
-                getMatchData() {
+                getData() {
 
                     var obj = JSONObject(it)
                     var teamsArray = obj.getJSONArray("teams")

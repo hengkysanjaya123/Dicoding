@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-            android:id="@+id/prevmatch"
+            android:id="@+id/matchesmenu"
             android:enabled="true"
-            android:title="Prev Match"
+            android:title="Matches"
             android:icon="@drawable/ic_teams"
             app:showAsAction="ifRoom"/>
 
     <item
-            android:id="@+id/nextmatch"
+            android:id="@+id/teamsMenu"
             android:enabled="true"
             android:icon="@drawable/ic_favorites"
-            android:title="Next Match"
+            android:title="Teams"
             app:showAsAction="ifRoom" />
 
 

@@ -45,10 +45,10 @@ object EndPoint {
             .toString()
     }
 
-    internal fun listTeamsByLeague(league: String): String {
+    internal fun listTeamsByLeague(leagueId: String): String {
         return baseApiUrl()
-            .appendPath("search_all_teams.php")
-            .appendQueryParameter("l", league)
+            .appendPath("lookup_all_teams.php")
+            .appendQueryParameter("id", leagueId)
             .build()
             .toString()
     }
