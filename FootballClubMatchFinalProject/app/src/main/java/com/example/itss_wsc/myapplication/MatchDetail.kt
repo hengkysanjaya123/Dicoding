@@ -14,6 +14,7 @@ import com.example.itss_wsc.myapplication.Model.Events
 import com.example.itss_wsc.myapplication.Model.Favorite
 import com.example.itss_wsc.myapplication.R.drawable.ic_add_to_favorites
 import com.example.itss_wsc.myapplication.R.drawable.ic_added_to_favorites
+import com.example.itss_wsc.myapplication.Utils.EndPoint
 import kotlinx.android.synthetic.main.activity_match_detail.*
 import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.delete
@@ -123,6 +124,7 @@ class MatchDetail : AppCompatActivity() {
             favoriteState()
 
             tvDate.text = event.dateEvent
+            tvTime.text = EndPoint.getTime(event.strDate + ' ' + event.strTime)
             tvHomeScore.text = if (event.intHomeScore == "null") "" else event.intHomeScore
             tvAwayScore.text = if (event.intAwayScore == "null") "" else event.intAwayScore
             tvHomeTeam.text = event.strHomeTeam

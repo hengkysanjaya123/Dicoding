@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.itss_wsc.myapplication.Model.Favorite
-import kotlinx.android.synthetic.main.favorite_custom_layout.view.*
+import kotlinx.android.synthetic.main.favorite_matches_custom_layout.view.*
 
 class FavoriteAdapter(
     private val context: Context,
@@ -16,7 +16,7 @@ class FavoriteAdapter(
 ) : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): FavoriteViewHolder {
-        return FavoriteViewHolder(LayoutInflater.from(context).inflate(R.layout.favorite_custom_layout, parent, false))
+        return FavoriteViewHolder(LayoutInflater.from(context).inflate(R.layout.favorite_matches_custom_layout, parent, false))
     }
 
     override fun getItemCount(): Int {

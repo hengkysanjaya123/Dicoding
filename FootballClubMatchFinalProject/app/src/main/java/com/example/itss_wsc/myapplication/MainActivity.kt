@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, TeamsFragment(), NextMatchFragment::class.java.simpleName)
+                .replace(R.id.main_container, TeamsFragment(), TeamsFragment::class.java.simpleName)
                 .commit()
         }
     }
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, MatchesFragment(), LastMatchFragment::class.java.simpleName)
+                .replace(R.id.main_container, MatchesFragment(), MatchesFragment::class.java.simpleName)
                 .commit()
         }
     }
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, FavoriteFragment(), FavoriteFragment::class.java.simpleName)
+                .replace(R.id.main_container, Favorites_Fragment(), Favorites_Fragment::class.java.simpleName)
                 .commit()
         }
     }

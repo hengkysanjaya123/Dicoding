@@ -1,7 +1,17 @@
 package com.example.itss_wsc.myapplication.Utils
 
 import android.net.Uri
+import android.os.Build
 import com.example.itss_wsc.myapplication.BuildConfig
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+import java.util.*
+
+//import java.text.SimpleDateFormat
+//import java.util.*
 
 
 object EndPoint {
@@ -67,5 +77,19 @@ object EndPoint {
             .appendQueryParameter("id", teamId)
             .build()
             .toString()
+    }
+
+    fun getTime(dateTime: String): String {
+        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"))
+        val myDate = simpleDateFormat.parse(dateTime)
+
+        val format = SimpleDateFormat("HH:mm")
+        val short = format.format(myDate)
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            return LocalDateTime.parse(myDate.toString(), DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)).toString()
+//        }
+        return short
     }
 }

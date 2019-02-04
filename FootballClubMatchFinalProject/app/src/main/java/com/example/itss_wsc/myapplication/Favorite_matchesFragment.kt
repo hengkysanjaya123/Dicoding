@@ -17,14 +17,14 @@ import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.select
 import org.json.JSONObject
 
-class FavoriteFragment : Fragment() {
+class Favorite_matchesFragment : Fragment() {
 
     private var favorites: ArrayList<Favorite> = arrayListOf()
     private lateinit var adapter: FavoriteAdapter
     private lateinit var recycler: RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_favorite, container, false)
+        val view = inflater.inflate(R.layout.fragment_favorite_matches, container, false)
 
         try {
             showFavorite()

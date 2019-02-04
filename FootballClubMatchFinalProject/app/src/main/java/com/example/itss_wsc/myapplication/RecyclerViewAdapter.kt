@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.itss_wsc.myapplication.Model.Events
+import com.example.itss_wsc.myapplication.Utils.EndPoint
 import kotlinx.android.synthetic.main.match_customlayout.view.*
 
 class RecyclerViewAdapter(
@@ -37,6 +38,7 @@ class RecyclerViewAdapter(
                 view.tvAwayScore.text = if (events.intAwayScore == "null") "" else events.intAwayScore
 
                 view.tvDate.text = events.strDate
+                view.tvTime.text = EndPoint.getTime(events.strDate + ' ' + events.strTime)
 
                 view.setOnClickListener {
                     listener(events)

@@ -183,7 +183,7 @@ class TeamsFragment : Fragment(), FragmentSearchInterface {
 
             adapter = TeamAdapter(mContext, test) {
                 var intt = Intent(mContext, TeamDetailActivity::class.java)
-//                intt.putExtra("events", it)
+                intt.putExtra("team", it)
                 startActivity(intt)
             }
             recycler.layoutManager = LinearLayoutManager(mContext)

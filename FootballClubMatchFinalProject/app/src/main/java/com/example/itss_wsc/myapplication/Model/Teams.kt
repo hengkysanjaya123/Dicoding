@@ -22,4 +22,5 @@ data class Teams(val idTeam: String,
                  val strDescriptionEN: String,
                  val strTeamBadge: String,
                  val strCountry: String)
-    : Parcelable
+    : Parcelable{
+}
